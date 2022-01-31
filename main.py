@@ -1,18 +1,16 @@
-#total $124.56
-#percentages of tip? 10, 12, or 15?
-#how many people?
+print("Welcome to the rollercoaster")
+height=int(input("What is your height in cm? "))
 
-print ("welcome to your calculator")
+if height >= 120:
+  print("you can ride")
+  age=int(input("what is your age? "))
+  if age >= 12:
+    print("that will be $5")
+  elif age >= 18:
+    print("that will be $7")
+  else:
+    print("that will be $12")
+  
 
-bill = float(input("what was your total bill?  $"))
-
-tip = int(input("how much tip would you like to give? 10, 12, or 15? "))
-
-people = int(input("how many people to split the bill?"))
-
-tip_as_percent = tip /100
-total_tip_amount = bill * tip_as_percent
-total_bill = total_tip_amount + bill
-bill_per_person = total_bill / people
-final_amount = round(bill_per_person, 2)
-print(f"each person shoud pay: ${final_amount}")
+else:
+  print("sorry no go")
